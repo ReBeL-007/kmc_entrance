@@ -26,8 +26,6 @@
           </a>
         </li>
         
-        @foreach(Auth::user()->groups as $group)
-        @if($group->title==='Owner')
             @can('user-management-access')
             <li class="nav-item has-treeview {{ request()->is('admin/permissions*') ? 'menu-open' : '' }} {{ request()->is('admin/roles*') ? 'menu-open' : '' }} {{ request()->is('admin/groups*') ? 'menu-open' : '' }} {{ request()->is('admin/users*') ? 'menu-open' : '' }}">
                 <a class="nav-link nav-dropdown-toggle" href="#">
@@ -129,8 +127,7 @@
           </a>
       </li>
     @endcan
-@endif
-@endforeach
+
     {{-- @can('sub-access')
       <li class="nav-item">
           <a href="{{ route("admin.subs.index") }}" class="nav-link {{ request()->is('admin/subs') || request()->is('admin/subs/*') ? 'active' : '' }}">

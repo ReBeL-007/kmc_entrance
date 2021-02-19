@@ -18,7 +18,8 @@
 <body class="hold-transition login-page">
   <div class="card" style="background-color: #ecf0f1;">
       <div class="card-header" style="text-align: center;">
-        <h1 style="color: rgb(128, 0, 107); text-align: center;">Mid-Western University</h1>
+        <h1 style="color: rgb(128, 0, 107); text-align: center;">Koteshwor Multiple Campus</h1>
+        <p>(Affiliated to Tribhuvan University)</p>
         <!-- <h4>Examinations Management Office</h4> -->
       </div>
       

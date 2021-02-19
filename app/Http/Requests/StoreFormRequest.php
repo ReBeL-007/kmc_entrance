@@ -29,9 +29,6 @@ class StoreFormRequest extends FormRequest
     {
         return [
             //
-            'campus' => [
-                'required'
-            ],
             'faculty' => [
                 'required'
             ],

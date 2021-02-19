@@ -18,9 +18,6 @@
                             Name
                         </th>
                         <th>
-                            College
-                        </th>
-                        <th>
                             Faculty
                         </th>
                         <th>
@@ -50,9 +47,6 @@
                          </td>
                          <td>
                          {{ $data->fname ?? '' }} {{ $data->mname ?? '' }} {{ $data->lname ?? '' }}
-                         </td>
-                         <td>
-                            {{$data->colleges->name}} 
                          </td>
                          <td>
                             {{$data->faculties->name}} 

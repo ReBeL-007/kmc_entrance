@@ -53,7 +53,7 @@
                             Name
                         </th>
                         <th>
-                            College
+                            Faculty
                         </th>
                         <th>
                             Program
@@ -91,7 +91,7 @@
                             {{ $data->fname ?? '' }} {{ $data->mname ?? '' }} {{ $data->lname ?? '' }}
                         </td>
                         <td>
-                            {{ $data->colleges->name ?? '' }}
+                            {{ $data->faculties->name ?? '' }}
                         </td>
                         <td>
                             {{ $data->course->name ?? '' }}

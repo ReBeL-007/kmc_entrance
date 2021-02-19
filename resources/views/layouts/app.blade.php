@@ -28,13 +28,13 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 header-image">
                     <img src="{{asset('MWU top.svg') }}" alt="">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -100,13 +100,13 @@
             @yield('content')
         </main>
         <footer>
-            <div class="container-fluid">
+            <!-- <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 header-image">
                         <img src="{{asset('MWU Bottom.svg') }}" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </footer>
 
     </div>

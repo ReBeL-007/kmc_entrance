@@ -20,11 +20,6 @@
     </div>
 
     <div class="card-body">
-        <div class="row">
-            <div class="col-md-12 header-image">
-                <img src="{{asset('MWU top.png') }}" alt="" style="width:100%">
-            </div>
-        </div>
 
     <form class="ui form" method="POST" action="{{ route('admin.forms.update', [$data->id]) }}" enctype="multipart/form-data">
             @method('PUT')
@@ -34,7 +29,7 @@
                 <div class="col-md-2">
                     <label class="">Symbol No :-</label>
                 </div>
-               <div class="col-md-4 roll-no">
+                <div class="col-md-4 roll-no">
                     <input class=" {{ $errors->has('symbol_no') ? 'is-invalid' : '' }}" type="text" name="symbol_no" placeholder="Exam Roll No" value="{{$data->symbol_no}}" disabled>
                     @if($errors->has('symbol_no'))
                     <span class="text-danger">
@@ -42,35 +37,9 @@
                     </span>
                     @endif
                 </div>
-                <div class="col-md-2">
-                    <label class="required">Exam Centre :-</label>
-                </div>
-               <div class="col-md-4 exam_centre">
-                    <input class=" {{ $errors->has('exam_centre') ? 'is-invalid' : '' }}" type="text" name="exam_centre" placeholder="Exam Centre" value="{{($data->campus==20)?$data->exam_centre:$data->colleges->name}}" required>
-                    @if($errors->has('exam_centre'))
-                    <span class="text-danger">
-                        {{$errors->first('exam_centre')}}
-                    </span>
-                    @endif
-                </div>
+                
             </div>
 
-            <div class="row">
-                <div class="col-md-3">
-                    <label class="required">Name of School/College/Campus</label>
-                </div>
-                <div class="col-md-4">
-                    <select class="form-control {{ $errors->has('campus') ? 'is-invalid' : '' }}"
-                        name="campus" id="campus" required>
-                        @foreach($colleges as $id=>$campus)
-                        <option value='{{ $id }}' {{ ($id==$data->campus) ? 'selected' : '' }}>{{ $campus }}</option>
-                        @endforeach
-                    </select>
-                    @if($errors->has('campus'))
-                    <span class="text-danger">{{ $errors->first('campus') }}</span>
-                    @endif
-                </div>
-            </div>
            {{-- permission  --}}
            <div class="permission field" >
                 <div class="row">
@@ -552,29 +521,6 @@
                 </div>
             </div>
         </div>
-        <h4 class=" ui dividing header">If married</h4>
-        <div class="parents-details field">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="row">
-                        <label class="col-md-4 ">Spouse's Name</label>
-                        <input type="text" class="form-control col-md-8" name="spouse_name" value="{{$data->spouse_name}}" >
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <label class="col-md-4 det">Qualifications</label>
-                        <input type="text" class="form-control col-md-8" placeholder="Qualifications" name="spouse_qualification" value="{{$data->spouse_qualification}}" >
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <label class="col-md-3 det">Occupation</label>
-                        <input type="tel" class="form-control col-md-9" placeholder="Occupation" name="spouse_occupation" value="{{$data->spouse_occupation}}" >
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <h4 class="ui dividing header">Other Details</h4>
            <!-- bank voucher -->
@@ -592,13 +538,7 @@
     </form>
     </div>
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 header-image">
-                    <img src="{{asset('MWU Bottom.svg') }}" alt="">
-                </div>
-            </div>
-        </div>
+        
     </footer>
 </div>
 

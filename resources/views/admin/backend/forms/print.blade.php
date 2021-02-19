@@ -4544,12 +4544,13 @@
 <body>
     <div id="Web_1920__1">
         <div id="Group_18">
-            <img id="mwu-logo" src="{{ asset('mwu-logo.png') }}" alt="Mid Western University">
+            <img id="mwu-logo" src="{{ asset('kmc.png') }}" alt="Mid Western University">
             <div id="Mid-Western_University">
-                <span>Mid-Western University</span>
+                <span>Koteshwor Multiple Campus</span>
             </div>
+            
             <div id="Surkhet_Nepal">
-                <span>Surkhet, Nepal</span>
+                <span>Jadibuti, Nepal</span>
             </div>
             <div id="Examination_Admission_Card">
                 <span>Entrance Examination Admit Card</span>
@@ -4584,12 +4585,11 @@
                 </path>
             </svg>
             <div id="SchoolCampus">
-                <span>School/Campus:</span>
             </div>
-            <svg class="Line_5" viewBox="0 0 356 3">
+            <!-- <svg class="Line_5" viewBox="0 0 356 3">
                 <path id="Line_5" d="M 0 0 L 356 0">
                 </path>
-            </svg>
+            </svg> -->
             <div id="Faculty_">
                 <span>Faculty :</span>
             </div>
@@ -4608,12 +4608,11 @@
                 <span>Level :</span>
             </div>
             <div id="Exam_Centre_">
-                <span>Exam. Centre :</span>
             </div>
-            <svg class="Line_9" viewBox="0 0 381 3">
+            <!-- <svg class="Line_9" viewBox="0 0 381 3">
                 <path id="Line_9" d="M 0 0 L 381 0">
                 </path>
-            </svg>
+            </svg> -->
             <div id="Bachelor__Master__MPhil">
                 @if($form->faculty===5 && $form->level===1)
                     @php
@@ -4752,7 +4751,6 @@
                 
             </div>
             <div id="college_name">
-                <span>{{$form->colleges->name}}</span>
             </div>
             <div id="registration_no">
             <span> {{ $form->fname ?? '' }} {{ $form->mname ?? '' }} {{ $form->lname ?? '' }}</span>
@@ -4764,7 +4762,6 @@
                 <span>{{$form->year}}</span>
             </div> -->
             <div id="exam_centre">
-                <span>{{($form->campus==20)?$form->exam_centre:$form->colleges->name}}</span>
             </div>
             @if($form->authorized_signature)
             <svg class="Rectangle_8">
